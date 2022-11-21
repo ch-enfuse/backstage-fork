@@ -24,6 +24,6 @@ describe('<BarChartLegend />', () => {
       <BarChartLegend costStart={1000} costEnd={5000} />,
     );
     expect(rendered.getByText(/\$1,000/)).toBeInTheDocument();
-    expect(rendered.queryByText(/\$5,000/)).toBeInTheDocument();
+    expect(rendered.getByText(/\$5,000/)).toBeInTheDocument();
   });
 });

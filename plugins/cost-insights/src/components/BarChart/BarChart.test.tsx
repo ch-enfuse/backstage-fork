@@ -102,7 +102,7 @@ describe('<BarChart />', () => {
 
     it('should display stepper if displaying more than 6 resources', async () => {
       const rendered = await renderWithProps({} as BarChartProps);
-      expect(rendered.queryByTestId('bar-chart-stepper')).toBeInTheDocument();
+      expect(rendered.getByTestId('bar-chart-stepper')).toBeInTheDocument();
     });
 
     it('should display the next step button if resources are remaining', async () => {
@@ -112,7 +112,7 @@ describe('<BarChart />', () => {
         rendered.queryByTestId('bar-chart-stepper-button-back'),
       ).not.toBeInTheDocument();
       expect(
-        rendered.queryByTestId('bar-chart-stepper-button-next'),
+        rendered.getByTestId('bar-chart-stepper-button-next'),
       ).toBeInTheDocument();
     });
 
